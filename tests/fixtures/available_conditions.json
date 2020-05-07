@@ -1,0 +1,64 @@
+{
+  "condition": [
+    {
+      "category": "numbers",
+      "label": "Numbers",
+      "functions": [
+        {
+          "name": "relation",
+          "label": "Relations between numbers",
+          "fields": [
+            {
+              "name": "left_value",
+              "label": "Left Value",
+              "type": "text",
+              "required": true,
+              "help_text": "Left value to be compared"
+            },
+            {
+              "name": "operator",
+              "label": "Operator",
+              "type": "dropdown",
+              "required": true,
+              "select_multiple": false,
+              "options": [
+                {
+                  "name": "Greater than",
+                  "value": ">"
+                },
+                {
+                  "name": "Greater or equal than",
+                  "value": ">="
+                },
+                {
+                  "name": "Equal To",
+                  "value": "=="
+                },
+                {
+                  "name": "Lower or equal than",
+                  "value": "<="
+                },
+                {
+                  "name": "Lower than",
+                  "value": "<"
+                },
+                {
+                  "name": "Not Equal To",
+                  "value": "!="
+                }
+              ],
+              "help_text": "What relation should there be between the two values?"
+            },
+            {
+              "name": "right_value",
+              "label": "Right Value",
+              "type": "number",
+              "required": true,
+              "help_text": "Right value to be compared"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

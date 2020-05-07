@@ -1,0 +1,16 @@
+version: '3'
+services:
+  database:
+    image: "postgres" # use latest official postgres version
+    container_name: master_service_database
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=user1
+      - POSTGRES_PASSWORD=pass1
+      - POSTGRES_DB=users_database # configure postgres
+    volumes:
+      - database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+
+volumes:
+  database-data: # named volumes can be managed easier using docker-compose

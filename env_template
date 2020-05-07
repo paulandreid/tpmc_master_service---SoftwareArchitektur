@@ -1,0 +1,17 @@
+# copy this file and rename it to .env
+# then add all the missing values/API keys/etc to it
+# the .env file will be read by django in order to load extra settings
+
+# DO NOT COMMIT THE .env FILE!
+
+USER=<<YOUR_USERNAME>>
+PASSWORD=<<YOUR_PASSWORD>>
+SECRET_AUTH_TOKEN=<<CATEGORY APIS TOKEN>>
+
+POSTGRES_DB=<<POSTGRES_NAME>>
+POSTGRES_USER=<<USERNAME_FOR_DB>>
+POSTGRES_PASSWORD=<<PASSWORD_FOR_DB>>
+POSTGRES_HOST=<<HOST_FOR_DB>>
+POSTGRES_PORT=<<PORT_FOR_DB>>
+
+COMPOSE_PROJECT_NAME=master_service

@@ -1,0 +1,71 @@
+{
+  "name": "MyFirstRoutine",
+  "phases": [
+    {
+      "id": 1,
+      "type": "operations",
+      "component_ids": [
+        2
+      ]
+    },
+    {
+      "id": 3,
+      "type": "conditions",
+      "component_ids": [
+        4
+      ]
+    },
+    {
+      "id": 10,
+      "type": "operations",
+      "component_ids": [
+        11
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": 1,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 10
+    }
+  ],
+  "components": [
+    {
+      "id": 4,
+      "type": "condition",
+      "category": "finance",
+      "company_symbol": "GOOGLE",
+      "stock_price": 6.15,
+      "relate": "="
+    },
+    {
+      "id": 5,
+      "type": "condition",
+      "category": "finance",
+      "company_symbol": "AAPL",
+      "stock_price": 242.21,
+      "relate": "<"
+    },
+    {
+      "id": 2,
+      "type": "operation",
+      "category": "messaging",
+      "recipient_email_address": "example@gmail.com",
+      "subject": "start of a routine",
+      "text": "Routine for condition based on Google and Apple stock "
+    },
+    {
+      "id": 11,
+      "type": "operation",
+      "category": "messaging",
+
+      "recipient_email_address": "example@gmail.com",
+      "subject": "start of a routine",
+      "text": "Routine 'MyFirstRoutine' executed!"
+    }
+  ]
+}

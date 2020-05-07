@@ -1,0 +1,56 @@
+{
+  "routine_name": "Reworked routine",
+  "components": [
+    {
+      "category_name": "messaging",
+      "type": "operation",
+      "function_name": "send_email",
+      "parameters": {
+        "recipient": "example@gmail.com",
+        "subject": "start of a routine",
+        "content": "Routine for condition based on Google and Apple stock "
+      }
+    },
+    {
+      "category_name": "finance",
+      "type": "operation",
+      "function_name": "stock_price",
+      "parameters": {
+        "company_symbol": "MSFT"
+      },
+      "result": "$microsoft_stock_price"
+    },
+    [
+      {
+        "type": "condition",
+        "category_name": "numbers",
+        "function_name": "relation",
+        "parameters": {
+          "left_value": "$microsoft_stock_price",
+          "operator": ">",
+          "right_value": 0
+        }
+      },
+      {
+        "type": "condition",
+        "category_name": "numbers",
+        "function_name": "relation",
+        "parameters": {
+          "left_value": 10,
+          "operator": "==",
+          "right_value": 10
+        }
+      }
+    ],
+    {
+      "type": "operation",
+      "category_name": "messaging",
+      "function_name": "send_email",
+      "parameters": {
+        "recipient": "example@gmail.com",
+        "subject": "End of a routine",
+        "content": "Microsoft stock price: $microsoft_stock_price"
+      }
+    }
+  ]
+}
